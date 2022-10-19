@@ -5,6 +5,7 @@ const path = require("path");
 const pizzasRoute = "./pizza_infos/pizzas.json";
 const allergensRoute = "./pizza_infos/allergens.json";
 const ingredientsRoute = "./pizza_infos/ingredients.json";
+const ordersRoute = "./orders.json";
 const port = 9002;
 const app = express();
 
@@ -36,6 +37,19 @@ app.get("/pizza/list", async (req, res) => {
   res.json(JSON.parse(fileData));
 });
 
-app.post("/api/order", async (req, res) => {});
+app.post("/api/order", async (req, res) => {
+  const fileData = await fileReader(ordersRoute);
+  const jsonData = JSON.parse(fileData);
+
+  const arrayOfExistingIDs = jsonData.orders.map(item => item.id);
+  const newID = arrayOfExistingIDs.length > 0 ? arrayOfExistingIDs.pop() + 1 : 1;
+  req.body.id = newID;
+  jsonData.orders.push(req.body);
+
+  const dataToWrite = JSON.stringify(jsonData, null, 4);
+  await fileWriter(dataToWrite);
+
+  res.status(200).send('Order saved');
+});
 
 app.listen(port, () => console.log(`http://127.0.0.1:${port}`));

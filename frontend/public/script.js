@@ -8,7 +8,6 @@ const searchBtn = document.querySelector("#search");
 const searchFrm = document.querySelector(".head .search-bar");
 
 // Cart button and window
-
 const cartBtn = document.querySelector("#cart");
 const cartWindow = document.querySelector(".head .cart-window");
 
@@ -44,7 +43,6 @@ okBtn.onclick = () => {
     ul.removeChild(ulChild);
     if (!ul.hasChildNodes()) ul = document.getElementById("allergens").lastElementChild;
     ulChild = ul.lastElementChild;
-    // console.log(ul.hasChildNodes());
   }
 };
 
@@ -103,9 +101,9 @@ document.addEventListener("click", createModalWindow);
 
 // Menu button
 
-// document.getElementById("menu-btn").addEventListener("click", () => {
-//   window.parent.location.href = "#menu";
-// });
+document.getElementById("return").addEventListener("click", () => {
+  window.location.href = "#menu";
+});
 
 document.getElementById("buy").addEventListener("click", () => {
   alert("Redirecting to payment site...");

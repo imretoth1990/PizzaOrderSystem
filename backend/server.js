@@ -1,10 +1,11 @@
 const express = require("express");
-const fileReader = require("./fileReader");
+const fileReader = require("./helper_tools/file-reader");
+const fileWriter = require("./helper_tools/file-writer");
 const path = require("path");
-
-const dataRoute = "./pizzas.json";
+const pizzasRoute = "./pizza_infos/pizzas.json";
+const allergensRoute = "./pizza_infos/allergens.json";
+const ingredientsRoute = "./pizza_infos/ingredients.json";
 const port = 9002;
-
 const app = express();
 
 app.use(express.json());
@@ -16,13 +17,25 @@ app.get("/", (req, res) => {
 
 app.use("/public", express.static(`${__dirname}/../frontend/public`));
 
+app.get("/api/allergens", async (req, res) => {
+  const fileData = await fileReader(allergensRoute);
+  res.json(JSON.parse(fileData));
+});
+
+app.get("/api/ingredients", async (req, res) => {
+  const fileData = await fileReader(ingredientsRoute);
+  res.json(JSON.parse(fileData));
+});
+
 app.get("/api/pizza", async (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/index.html`));
 });
 
 app.get("/pizza/list", async (req, res) => {
-  const fileData = await fileReader(dataRoute);
+  const fileData = await fileReader(pizzasRoute);
   res.json(JSON.parse(fileData));
 });
+
+app.post("/api/order", async (req, res) => {});
 
 app.listen(port, () => console.log(`http://127.0.0.1:${port}`));

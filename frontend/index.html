@@ -23,11 +23,24 @@
       <div class="side-bar">
         <i class="fas fa-search" id="search"></i>
         <i class="fas fa-user" id="user"></i>
+        <i class="fas fa-shopping-cart" id="cart"></i>
         <i class="fas fa-bars" id="bars"></i>
       </div>
       <form action="#" class="search-bar">
         <input type="search" name="search" id="1" placeholder="Search Here" />
       </form>
+      <div action="#" class="cart-window">
+        <h1>Your shopping cart</h1>
+        <form id="valueForm">
+          <div class="value-button"  id="decrease" value="Decrease Value">-</div>
+          <input type="number" id="number" value="0" min="0">
+          <div class="value-button"  id="increase" value="Increase Value">+</div>
+        </form>
+        <div class="cart-buttons">
+          <a href="#menu"><button id="return" class="return">Return to menu</button></a>
+          <button class="menu-btn" id="buy">Buy</button>
+        </div>
+      </div>
     </header>
 
     <!----------------------------------Home Section----------------------------->
@@ -42,7 +55,7 @@
             Welcome to Pizzeria Ristorante Luce del Sole! We deliver the finest Italian pizza in the heart of the beautiful Vienna. Please take some time to get
             to know the best selection of our extremely juicy and delicious pizza specialities.
           </p>
-          <button id="menu-btn" class="menu-btn"><a href="#menu">Menu</a></button>
+          <button id="menu-btn" class="menu-btn">Menu</button>
         </div>
         <!-- <div class="inner-content-img">
           <img src="https://parspng.com/wp-content/uploads/2022/05/pizzapng.parspng.com-4.png" alt="img" />
@@ -86,7 +99,7 @@
       <div class="inner-box">
         <img src="/public/images/service-images/online-payment.png" />
         <h2>Online payment</h2>
-        <p>With 10% off of every second order</p>
+        <p>With <b>10% off</b> of every second order</p>
       </div>
       <div class="inner-box">
         <img src="/public/images/service-images/fresh.png" />
@@ -104,7 +117,21 @@
   <!-- modal section -->
   <div class="bg-modal">
     <div class="modal-content">
-      <button id="close-button">ⓧ</button>
+      <!-- <button id="close-button">ⓧ</button> -->
+    
+        <div id="ingredients">
+          <label class="labels">Ingredients</label>
+          <ul></ul>
+        </div>
+        <div id="allergens">
+          <label class="labels">Allergens</label>
+          <ul></ul>
+        </div>
+      </div>
+
+      <div id="ok-button-div">
+        <button class="menu-btn" id="ok-button">OK</button>
+      </div>
     </div>
   </div>
   <!-------------------------------------------contact Section-------------->
@@ -131,7 +158,7 @@
       <div class="map">
         <iframe
           width="100%"
-          height="280"
+          height="210"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"

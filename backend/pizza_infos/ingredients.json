@@ -1,0 +1,80 @@
+{
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "wheat flour, type '00'"
+    },
+    {
+      "id": 2,
+      "name": "salt"
+    },
+    {
+      "id": 3,
+      "name": "extra virgin olive oil"
+    },
+    {
+      "id": 4,
+      "name": "fresh yeast"
+    },
+    {
+      "id": 5,
+      "name": "tomato sauce"
+    },
+    {
+      "id": 6,
+      "name": "mozzarella"
+    },
+    {
+      "id": 7,
+      "name": "basil"
+    },
+    {
+      "id": 8,
+      "name": "pepperoni"
+    },
+    {
+      "id": 9,
+      "name": "mushroom"
+    },
+    {
+      "id": 10,
+      "name": "olive"
+    },
+    {
+      "id": 11,
+      "name": "ham"
+    },
+    {
+      "id": 12,
+      "name": "rocket"
+    },
+    {
+      "id": 13,
+      "name": "ananas"
+    },
+    {
+      "id": 14,
+      "name": "gorgonzola"
+    },
+    {
+      "id": 15,
+      "name": "provolone"
+    },
+    {
+      "id": 16,
+      "name": "parmesan"
+    },
+    {
+      "id": 17,
+      "name": "mussel"
+    },
+    {
+      "id": 18,
+      "name": "squid"
+    },
+    {
+      "id": 19,
+      "name": "shrimp"
+    }
+  ]
+}

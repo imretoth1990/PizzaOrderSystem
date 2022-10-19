@@ -1,0 +1,44 @@
+{
+  "allergens": [
+    {
+      "id": 1,
+      "name": "gluten"
+    },
+    {
+      "id": 2,
+      "name": "lactose"
+    },
+    {
+      "id": 3,
+      "name": "fish"
+    },
+    {
+      "id": 4,
+      "name": "molluscs"
+    },
+    {
+      "id": 5,
+      "name": "egg"
+    },
+    {
+      "id": 6,
+      "name": "nuts"
+    },
+    {
+      "id": 7,
+      "name": "sulphur dioxid"
+    },
+    {
+      "id": 8,
+      "name": "celery"
+    },
+    {
+      "id": 9,
+      "name": "mustard"
+    },
+    {
+      "id": 10,
+      "name": "soybean"
+    }
+  ]
+}

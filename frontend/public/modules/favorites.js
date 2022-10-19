@@ -1,1 +1,0 @@
-const favoritePizzas = document.querySelectorAll();

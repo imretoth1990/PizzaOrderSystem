@@ -4,8 +4,10 @@ export function fetchAndRenderPizzas() {
     .then((data) => renderPizzas(data.pizzas))
     .catch((err) => console.error(err));
 
-  function renderPizzas(pizzasArray) {
-    pizzasArray.forEach((pizza) => {
+  function renderPizzas(pizzaObjectsArray) {
+    const sortedPizzaObjectsByPrice = pizzaObjectsArray.sort((a, b) => b.price - a.price); // a - b descending
+
+    sortedPizzaObjectsByPrice.forEach((pizza) => {
       const menuContent = document.getElementById("menu-content");
 
       const pizzaContainer = `
@@ -20,6 +22,8 @@ export function fetchAndRenderPizzas() {
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <h2>${pizza.name}</h2>
+              <h6 id="allergen-ids" hidden>${pizza.allergens}</h6>
+              <h6 id="ingredient-ids" hidden>${pizza.ingredients}</h6>
               <div class="price">€ ${pizza.price}</div>
               <button class="btn">Add to cart <i class="fas fa-plus-circle"></i></button>
             </div>

@@ -106,5 +106,6 @@ document.getElementById("return").addEventListener("click", () => {
 });
 
 document.getElementById("buy").addEventListener("click", () => {
-  alert("Redirecting to payment site...");
+  
+  alert("Order received, redirecting to payment site...");
 });

@@ -1,0 +1,67 @@
+{
+  "pizzas": [
+    {
+      "id": 1,
+      "name": "Margherita",
+      "img": "/public/images/pizza-images/margherita.jpeg",
+      "ingredients": ["tomatoe sauce", "mozzarella", "basil", "olive oil", "salt", "wheat flour", "yeast"],
+      "price": 7,
+      "allergens": [1, 7],
+      "kcal": 750
+    },
+    {
+      "id": 2,
+      "name": "Quattro Staggioni",
+      "img": "/public/images/pizza-images/quattro-staggioni.jpeg",
+      "ingredients": ["pepperoni", "mushroom", "olive", "tomatoe sauce", "mozzarella", "olive oil", "salt", "wheat flour", "yeast"],
+      "price": 10,
+      "allergens": [1, 7, 12],
+      "kcal": 870
+    },
+    {
+      "id": 3,
+      "name": "Parma",
+      "img": "/public/images/pizza-images/parma.jpeg",
+      "ingredients": ["ham", "rocket", "tomatoe sauce", "mozzarella", "olive oil", "salt", "wheat flour", "yeast"],
+      "price": 10,
+      "allergens": [1, 7, 12],
+      "kcal": 850
+    },
+    {
+      "id": 4,
+      "name": "Pepperoni",
+      "img": "/public/images/pizza-images/pepperoni.jpeg",
+      "ingredients": ["pepperoni", "tomatoe sauce", "mozzarella", "olive oil", "salt", "wheat flour", "yeast"],
+      "price": 9,
+      "allergens": [1, 7, 9, 10],
+      "kcal": 825
+    },
+    {
+      "id": 5,
+      "name": "Hawaii",
+      "img": "/public/images/pizza-images/hawaii.jpeg",
+      "ingredients": ["ananas", "ham", "tomatoe sauce", "basil", "olive oil", "salt", "wheat flour", "yeast"],
+      "price": 8.5,
+      "allergens": [1],
+      "kcal": 790
+    },
+    {
+      "id": 6,
+      "name": "Quattro Formaggi",
+      "img": "/public/images/pizza-images/quattro-formaggi.jpeg",
+      "ingredients": ["gorgonzola", "provolone", "parmesan", "tomatoe sauce", "mozzarella", "olive oil", "salt", "wheat flour", "yeast"],
+      "price": 11,
+      "allergens": [1, 6, 7],
+      "kcal": 950
+    },
+    {
+      "id": 7,
+      "name": "Frutti di Mare",
+      "img": "/public/images/pizza-images/seafood.png",
+      "ingredients": ["mussel", "squid", "shrimp", "tomatoe sauce", "basil", "olive oil", "salt", "wheat flour", "yeast"],
+      "price": 12,
+      "allergens": [1, 2, 4, 14],
+      "kcal": 890
+    }
+  ]
+}

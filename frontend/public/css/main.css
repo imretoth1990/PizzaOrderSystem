@@ -13,7 +13,11 @@
   box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
   text-decoration: none;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+}
+
+body {
+  background-color: rgba(207, 181, 141);
 }
 
 html {
@@ -31,15 +35,51 @@ html::-webkit-scrollbar-thumb {
   background: var(--clr4);
 }
 
-.btn {
+.menu-btn {
   margin-top: 2rem;
   padding: 1.3rem 4rem;
   font-size: 1.5rem;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-weight: 500;
-  color: #000;
+
+  background-color: var(--clr2);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.menu-btn a {
+  color: var(--clr4);
+}
+
+.menu-btn a:hover {
+  color: black;
+}
+
+.menu-btn:hover {
   background-color: #fff;
+  box-shadow: 0px 0.2rem 2rem rgba(255, 244, 85, 0.4);
+  color: black;
+  transform: translateY(-1rem);
+}
+
+.menu-btn:active {
+  transform: translateY(-0.1rem);
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 1.3rem 4rem;
+  font-size: 1.5rem;
+  /* text-transform: capitalize; */
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  color: var(--clr2);
+  background-color: var(--clr4);
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.1);
@@ -49,9 +89,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 .btn:hover {
-  background-color: var(--clr3);
-  box-shadow: 0px 0.2rem 2rem rgba(255, 85, 94, 0.4);
-  color: #fff;
+  background-color: #fff;
+  box-shadow: 0px 0.2rem 2rem rgba(255, 244, 85, 0.4);
+  color: black;
   transform: translateY(-1rem);
 }
 
@@ -64,31 +104,16 @@ section {
   margin-top: 8rem;
 }
 
-#welcome {
-  color: #fff;
-  font-size: 20px;
-}
-
-#pizza_sole {
-  font-size: 20px;
-}
-
-.home {
-  background-image: url("/frontend/public/images/Bottoms\ Up\ -\ Food\ Photography\ on\ Behance.jpeg");
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
-}
-
 section h3 {
-  font-size: 3rem;
-  color: #fff;
+  font-size: 7rem;
+  color: var(--clr2);
   text-transform: none;
   text-align: center;
   letter-spacing: 0.2rem;
 }
 
 section h4 {
-  margin: 0 0 1rem 25rem;
+  margin: 0 0 1rem 30rem;
   padding: 0.2rem;
   width: 50%;
   font-size: 3rem;
@@ -106,14 +131,14 @@ section h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--clr3);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   letter-spacing: 0.1rem;
 }
 
 section p {
   color: var(--clr2);
   font-size: 1.5rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   line-height: 2.5rem;
   word-wrap: normal;
 }
@@ -133,7 +158,7 @@ section p {
 }
 
 .head h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .head .fa-pizza-slice {
@@ -152,14 +177,14 @@ section p {
 
 .head .navbar a {
   color: var(--clr2);
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 600;
   margin: 0 5rem;
 }
 
 .head .navbar a:hover {
   transition: 0.4s ease;
-  color: var(--clr3);
+  color: #fff;
 }
 
 .head .side-bar i {
@@ -171,7 +196,7 @@ section p {
 }
 
 .head .side-bar i:hover {
-  background: var(--clr3);
+  background: #fff;
   color: var(--clr4);
   transition: 0.5s ease all;
 }
@@ -213,7 +238,7 @@ section p {
 
 .home {
   height: 100vh;
-  background: url(/frontend/public/images/Bottoms\ Up\ -\ Food\ Photography\ on\ Behance.jpeg) no-repeat;
+  background: url(/public/images/pizza-zeit-leckere-hausgemachte-traditionelle-pizza-italienisches-rezept_144627-42528.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -224,9 +249,10 @@ section p {
 }
 
 .inner-content {
-  /* color: #fff; */
-  max-width: 70rem;
+  color: var(--clr2);
+  max-width: 80rem;
   margin-top: 20rem;
+  margin-left: -10rem;
   text-align: center;
 }
 
@@ -253,6 +279,7 @@ section p {
 }
 
 .img img {
+  margin-top: 5rem;
   width: 45rem;
   height: auto;
   text-align: center;
@@ -260,7 +287,9 @@ section p {
 }
 
 .about-content h3 {
-  background: url(back.png);
+  margin-top: 5rem;
+  /* background: url(back.png); */
+  /* background-color: rgba(207, 181, 140); */
   background-size: cover;
   background-position: center;
   color: var(--clr4);
@@ -268,15 +297,19 @@ section p {
 
 .about-content p {
   padding-bottom: 2rem;
-  color: var(--clr3);
-  font-size: 1.4rem;
+  /* background-color: rgba(207, 181, 140); */
+  color: var(--clr4);
+  font-size: 2rem;
   font-weight: 600;
 }
 
 .about-inner h5 {
+  /* background-color: rgba(207, 181, 140); */
+  width: 100%;
+  color: var(--clr4);
   padding: 1rem 0;
-  font-size: 1.5rem;
-  text-transform: capitalize;
+  font-size: 2rem;
+  /* text-transform: capitalize; */
   font-weight: 900;
 }
 
@@ -319,8 +352,13 @@ section p {
   transition: 0.5s ease all;
 }
 
-.inner-box img {
+.inner-box:nth-child(-n + 2) img {
   width: 15rem;
+  height: 15rem;
+}
+
+.inner-box:nth-child(3) img {
+  width: 25rem;
   height: 15rem;
 }
 
@@ -355,12 +393,17 @@ section p {
   height: auto;
 }
 
-.in-box .far {
+/* .in-box .far {
   position: absolute;
   font-size: 2.5rem;
   margin-left: -7rem;
   color: var(--clr3);
-}
+} */
+
+/* .in-box .far {
+  font-size: 2rem;
+  color: var(--clr3);
+} */
 
 .in-box .veg-icon {
   margin-left: 22rem;
@@ -378,12 +421,7 @@ section p {
 }
 
 .fa-star {
-  color: var(--clr5);
-}
-
-.in-box .far {
-  font-size: 2rem;
-  color: var(--clr3);
+  color: grey;
 }
 
 .in-box .fa-plus-circle {
@@ -451,6 +489,10 @@ section p {
 }
 
 .contact-sec {
+  /* background-color: rgba(207, 181, 141); */
+  background-image: url(/public/images/buy-a-pizzeria.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
 }
 
@@ -468,26 +510,28 @@ section p {
 }
 
 .contact-inner-col img {
-  width: 100%;
+  width: 70%;
   height: auto;
   margin: 1.5rem;
   padding: 1rem;
 }
 
 .contact-inner-col h1 {
+  /* background-color: transparent; */
   padding: 1rem 0;
-  color: var(--clr4);
+  color: var(--clr2);
   font-size: 3rem;
   letter-spacing: 0.1rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .contact-inner-col p {
+  /* background-color: var(--clr2); */
   padding: 0.5rem 0;
   line-height: 1.5rem;
   font-size: 1.5rem;
-  text-transform: capitalize;
-  color: #aaa;
+  /* text-transform: capitalize; */
+  color: var(--clr2);
 }
 
 .contact-inner-col input,
@@ -531,14 +575,29 @@ textarea {
   padding: 1rem;
   background: var(--clr4);
   color: var(--clr2);
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .social i:hover {
   transform: translateY(-2rem);
-  color: var(--clr2);
+  color: #fff;
   cursor: pointer;
   transition: 1s ease;
+}
+
+.in-box > img {
+  width: 300px;
+  height: 200px;
+}
+
+.heart-container {
+  text-align: center;
+}
+
+.heart-container > i {
+  padding-top: 0.6rem;
+  font-size: 2rem;
+  color: var(--clr3);
 }
 
 /*--------------media Query------------*/
@@ -620,4 +679,38 @@ textarea {
   .service-content {
     padding: 1rem;
   }
+}
+
+.bg-modal {
+  padding: 300px;
+  position: sticky;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* opacity: 0.7; */
+  top: 0;
+  bottom: 0;
+  border-radius: 4px;
+}
+
+.modal-content {
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  /* opacity: 1; */
+}
+
+#close-button {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: 44rem;
 }

@@ -1,5 +1,7 @@
 import { fetchAndRenderPizzas } from "./modules/pizza-renderer.js";
 import { fetchAndSpreadAllergensAndIngredients } from "./modules/modal-window-renderer.js";
+import { orderPizza } from "./modules/pizza-orderer.js";
+import { assembleOrderObject } from "./modules/order-object-assembler.js"
 
 fetchAndRenderPizzas();
 
@@ -106,6 +108,6 @@ document.getElementById("return").addEventListener("click", () => {
 });
 
 document.getElementById("buy").addEventListener("click", () => {
-  
-  alert("Order received, redirecting to payment site...");
+  const assembledOrder = assembleOrderObject();
+  orderPizza(assembledOrder);
 });

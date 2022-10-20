@@ -39,17 +39,23 @@ app.get("/pizza/list", async (req, res) => {
 
 app.post("/api/order", async (req, res) => {
   const fileData = await fileReader(ordersRoute);
-  const jsonData = JSON.parse(fileData);
+  const data = JSON.parse(fileData);
 
-  const arrayOfExistingIDs = jsonData.orders.map(item => item.id);
-  const newID = arrayOfExistingIDs.length > 0 ? arrayOfExistingIDs.pop() + 1 : 1;
-  req.body.id = newID;
-  jsonData.orders.push(req.body);
+  const body = req.body;
 
-  const dataToWrite = JSON.stringify(jsonData, null, 4);
+  if (!body.hasOwnProperty("id")) {
+    let maxID = data.orders.reduce((acc, curr) => (curr.id >= acc ? curr.id : acc), 0);
+
+    let newID = maxID + 1;
+    let newData = { id: newID, ...body };
+    data.orders.push(newData);
+  } else {
+    body.id = data.orders.length + 1;
+    data.orders.push(body);
+  }
+
+  const dataToWrite = JSON.stringify(data, null, 2);
   await fileWriter(dataToWrite);
-
-  res.status(200).send('Order saved');
 });
 
 app.listen(port, () => console.log(`http://127.0.0.1:${port}`));

@@ -13,7 +13,6 @@
   box-sizing: border-box;
   font-family: "PT Sans", sans-serif;
   text-decoration: none;
-  /* text-transform: uppercase; */
 }
 
 body {
@@ -42,7 +41,6 @@ html::-webkit-scrollbar-thumb {
   text-transform: capitalize;
   letter-spacing: 0.1rem;
   font-weight: 500;
-
   background-color: var(--clr2);
   border: none;
   border-radius: 0.5rem;
@@ -75,7 +73,6 @@ html::-webkit-scrollbar-thumb {
   margin-top: 2rem;
   padding: 1.3rem 4rem;
   font-size: 1.5rem;
-  /* text-transform: capitalize; */
   letter-spacing: 0.1rem;
   font-weight: 500;
   color: var(--clr2);
@@ -131,14 +128,12 @@ section h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--clr3);
-  /* text-transform: capitalize; */
   letter-spacing: 0.1rem;
 }
 
 section p {
   color: var(--clr2);
   font-size: 1.5rem;
-  /* text-transform: capitalize; */
   line-height: 2.5rem;
   word-wrap: normal;
 }
@@ -238,15 +233,13 @@ section p {
 /* - - - - - - - - - - - - Cart Window - - - - - - - - - - - - */
 
 .cart-window {
-  height: 70rem;
+  height: 60rem;
   width: 40rem;
   padding: 0 1rem;
-  /* display: flex; */
   position: absolute;
   top: 99%;
   left: 75.1%;
   right: 0;
-  /* align-items: center; */
   background: var(--clr3);
   border: 2px solid var(--clr4);
   clip-path: polygon(20% 0%, 80% 0%, 100% 0, 0 0);
@@ -268,15 +261,27 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* align-content: space-between; */
-  margin-top: 580px;
+  margin-top: 450px;
+}
+
+#sum-container {
+  margin-right: 100px;
+  margin-bottom: 20px;
+}
+
+#sum-container label {
+  font-size: 20px !important;
+}
+
+[for="customer-email"] {
+  margin-left: 2px !important;
+}
+
+[for="city"] {
+  margin-left: 14px !important;
 }
 
 .return {
-  margin-left: 22px;
   margin-right: 37px;
 }
 
@@ -308,31 +313,58 @@ section p {
   color: black;
 }
 
-/* #buy {
-   margin-left: 15%; 
-} */
-
 /* - - - - - - - - - - - Increase/Decrease Value - - - - - - - - - - - - */
 
 #valueForm {
+  margin-top: 20px;
   position: absolute;
   width: 300px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 50px;
-  margin-left: 150px;
+  margin-left: 100px;
 }
 
-.value-button {
+#valueForm span {
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding-bottom: 20px;
+  margin-right: 100px;
+  margin-top: 20px;
+}
+
+#valueForm ul {
+  list-style-type: none;
+  margin-left: -290px;
+}
+
+#valueForm li {
+  list-style-type: none;
+  margin-left: 180px;
+  font-size: 16px;
+}
+
+#valueForm label {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+li label + input {
+  margin-right: 35px;
+}
+
+.increase,
+.decrease {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   display: inline-block;
   text-align: center;
   font-size: 25px;
-  /* border: 1px solid #ddd; */
   margin: 0px;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   vertical-align: middle;
-  padding: 11px 0;
+
   background: rgb(207, 181, 141);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -341,13 +373,6 @@ section p {
   -ms-user-select: none;
   user-select: none;
   color: black;
-
-  /* margin-top: 2rem;
-  padding: 1.3rem 4rem;
-  font-size: 1.5rem;
-  text-transform: capitalize;
-  letter-spacing: 0.1rem;
-  font-weight: 500; */
 
   background-color: var(--clr2);
   border: none;
@@ -358,19 +383,29 @@ section p {
   outline: none;
 }
 
-.value-button:hover {
+/* hide arrows of the input field (in the shopping cart) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder,
+textarea {
+  font-style: italic;
+}
+
+.increase:hover,
+.decrease:hover {
   background-color: #fff;
   box-shadow: 0px 0.2rem 2rem rgba(255, 244, 85, 0.4);
   color: black;
-  /* transform: translateY(-1rem); */
-}
-
-.value-button:active {
-  transform: translateY(-0.5rem);
-}
-
-.value-button:hover {
   cursor: pointer;
+}
+
+.increase:active,
+.decrease:active {
+  transform: translateY(-0.5rem);
 }
 
 #valueForm #decrease {
@@ -383,18 +418,13 @@ section p {
   border-radius: 0 8px 8px 0;
 }
 
-#valueForm #input-wrap {
-  margin: 0px;
-  padding: px;
-}
-
 #number {
   text-align: center;
   border: none;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  margin: 0px;
-  width: 40px;
+  padding-bottom: 5px;
+  width: 5px;
   height: 40px;
 }
 /*------------------------Home Section--------------------*/
@@ -430,7 +460,6 @@ section p {
 }
 
 .inner-content i {
-  /* color: var(--clr4); */
   color: #fff;
 }
 
@@ -451,8 +480,6 @@ section p {
 
 .about-content h3 {
   margin-top: 5rem;
-  /* background: url(back.png); */
-  /* background-color: rgba(207, 181, 140); */
   background-size: cover;
   background-position: center;
   color: var(--clr4);
@@ -460,19 +487,16 @@ section p {
 
 .about-content p {
   padding-bottom: 2rem;
-  /* background-color: rgba(207, 181, 140); */
   color: var(--clr4);
   font-size: 2rem;
   font-weight: 600;
 }
 
 .about-inner h5 {
-  /* background-color: rgba(207, 181, 140); */
   width: 100%;
   color: var(--clr4);
   padding: 1rem 0;
   font-size: 2rem;
-  /* text-transform: capitalize; */
   font-weight: 900;
 }
 
@@ -537,18 +561,14 @@ section p {
   grid-template-columns: 1.2fr 1.2fr 1.2fr;
   grid-gap: 0.5rem;
   flex-wrap: nowrap;
-  /* background-image: url(/public/images/pngwing.com.png); */
   background-repeat: no-repeat;
   background-size: cover;
-  /* width: 100%; */
   height: 100%;
 }
 
 .in-box {
   padding: 3rem 4rem;
   text-align: center;
-  /* background-color: rgba(207, 181, 141, 0.7); */
-  /* border: 0.1rem solid var(--clr4); */
 }
 
 .in-box:hover {
@@ -560,18 +580,6 @@ section p {
   width: 20rem;
   height: auto;
 }
-
-/* .in-box .far {
-  position: absolute;
-  font-size: 2.5rem;
-  margin-left: -7rem;
-  color: var(--clr3);
-} */
-
-/* .in-box .far {
-  font-size: 2rem;
-  color: var(--clr3);
-} */
 
 .in-box .veg-icon {
   margin-left: 22rem;
@@ -657,7 +665,6 @@ section p {
 }
 
 .contact-sec {
-  /* background-color: rgba(207, 181, 141); */
   background-image: url(/public/images/buy-a-pizzeria.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -685,20 +692,16 @@ section p {
 }
 
 .contact-inner-col h1 {
-  /* background-color: transparent; */
   padding: 1rem 0;
   color: var(--clr2);
   font-size: 3rem;
   letter-spacing: 0.1rem;
-  /* text-transform: capitalize; */
 }
 
 .contact-inner-col p {
-  /* background-color: var(--clr2); */
   padding: 0.5rem 0;
   line-height: 1.5rem;
   font-size: 1.5rem;
-  /* text-transform: capitalize; */
   color: var(--clr2);
 }
 
@@ -852,9 +855,6 @@ textarea {
 /* - - - - - - - - - MODAL SECTION - - - - - - - - - */
 
 .bg-modal {
-  /* padding: 300px;
-  position: sticky; */
-  /* padding-top: 100%; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -864,12 +864,7 @@ textarea {
   display: none;
   justify-content: center;
   align-items: center;
-  /* width: 100%; */
-  /* height: 100%; */
   background-color: rgba(0, 0, 0, 0.7);
-  /* opacity: 0.7; */
-  /* top: 0;
-  bottom: 0; */
   border-radius: 4px;
 }
 
@@ -877,43 +872,14 @@ textarea {
   width: 500px;
   height: 300px;
   background-color: rgb(58, 58, 58);
-  /* opacity: 1; */
   color: rgb(207, 181, 141);
 }
-
-/* #close-button {
-  visibility: hidden;
-  display: flex;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 1rem;
-  margin-left: 44rem;
-  background-color: var(--clr2);
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0rem 2rem 2rem rgba(255, 244, 85, 0.4);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-}
-
-#close-button:hover {
-  background-color: #fff;
-  box-shadow: 0px 0.2rem 2rem rgba(255, 244, 85, 0.4);
-  color: black;
- transform: translateY(-1rem); 
-} */
 
 #ingredients {
   position: fixed;
   margin-top: 20px;
   margin-left: 80px;
   padding-right: 15%;
-  /* padding-bottom: 2%;   */
   font-size: 15px;
 }
 
@@ -921,10 +887,6 @@ textarea {
   position: fixed;
   margin-top: 20px;
   margin-left: 280px;
-  /* display: flex;
-  justify-content: left;
-  align-items: left; */
-  /* padding-left: 5%; */
   font-size: 15px;
 }
 
@@ -935,13 +897,42 @@ textarea {
 }
 
 .labels {
-  /* padding-left: 2%; */
   margin-left: -0.5rem;
   font-size: 20px;
 }
 
 #ok-button-div {
-  padding-right: 7%;
-  padding-top: 9%;
-  margin-left: -150px;
+  padding-right: 5px;
+  padding-top: 200px;
+  margin-left: 350px;
+}
+
+#listElement {
+  /* position: absolute; */
+  /* display: flex; */
+}
+
+.listContentContainer {
+  /* position: fixed; */
+  margin-left: 130px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  display: flex;
+  align-content: space-between;
+}
+
+.pizzaName {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.number {
+  width: 25px;
+  height: 25px;
+}
+
+.close-button {
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
 }

@@ -25,7 +25,7 @@ export function fetchAndRenderPizzas() {
               <h6 id="allergen-ids" hidden>${pizza.allergens}</h6>
               <h6 id="ingredient-ids" hidden>${pizza.ingredients}</h6>
               <div class="price">€ ${pizza.price}</div>
-              <button class="btn">Add to cart <i class="fas fa-plus-circle"></i></button>
+              <button data-pizza-id="${pizza.id}" data-pizza-name="${pizza.name}" data-pizza-price="${pizza.price}" class="btn">Add to cart <i class="fas fa-plus-circle"></i></button>
             </div>
           </div>
       </div>`;
